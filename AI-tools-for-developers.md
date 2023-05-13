@@ -27,6 +27,8 @@
 --- 
 
 ### Writing a bash script to automate a complex task
+
+![](write-bash-script-to-automate-complex-task.png)
 --- 
 
 ### modifying generated code
