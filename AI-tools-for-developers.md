@@ -52,7 +52,7 @@
 
 ## A comprehensive practical example
 
-[A small `docker-compose` project](https://poe.com/s/6Omq7wDLLVmFVQITyhWJ)
+### [A small `docker-compose` project](https://poe.com/s/6Omq7wDLLVmFVQITyhWJ)
 
 --- 
 ## UI design
