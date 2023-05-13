@@ -33,9 +33,43 @@
 		.then(res => res.text())
 		.then(rawMd => {
 			const slides = rawMd.split("---");
-			console.log(`Num slides: ${slides.length}`);
+			
 		})
 		.catch(err => console.error(err));
 	</script>
+
+	<style>
+		header, footer {
+			background: #333; 
+		}
+
+		nav {
+			display: flex;
+			justify-content: space-between;
+		}  
+
+		nav ul {
+			list-style: none; 
+			margin: 0;
+			padding: 0;
+			display: flex;
+		}
+
+		nav li {
+			flex: 1 1 auto;
+		}
+
+		nav a, footer p {
+			display: block;
+			text-decoration: none; 
+			color: #fff;
+			padding: 1rem;
+			text-align: center; 
+		}
+
+		nav a:hover {
+			background: #666;
+		}
+	</style>
 </body>
 </html>
