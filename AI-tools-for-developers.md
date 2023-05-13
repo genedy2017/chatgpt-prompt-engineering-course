@@ -20,9 +20,13 @@
 ## ChatGPT as your personal coding assistant
 --- 
 
-### Writing simple functions in any language
+### Writing simple functions in any language (1/2)
 
 ![](write-fibonacci-function-in-js.png)
+--- 
+
+### Writing simple functions in any language (2/2)
+
 ![](write-fibonacci-function-in-python.png)
 --- 
 
