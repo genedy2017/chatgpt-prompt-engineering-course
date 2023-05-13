@@ -31,7 +31,8 @@
 
 	<script>
 		// Get all slides
-		fetch('https://raw.githubusercontent.com/genedy2017/chatgpt-prompt-engineering-course/master/AI-tools-for-developers.md')
+		const presentationUrl = 'https://raw.githubusercontent.com/genedy2017/chatgpt-prompt-engineering-course/master/AI-tools-for-developers.md';
+		fetch(`${presentationUrl}?${Date.now()}`)
 		.then(res => res.text())
 		.then(rawMd => {
 			const slides = rawMd.split("---").map(slide => slide.trim());
