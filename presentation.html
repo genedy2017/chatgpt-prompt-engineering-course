@@ -35,7 +35,7 @@
 		.then(res => res.text())
 		.then(rawMd => {
 			const slides = rawMd.split("---").map(slide => slide.trim());
-			const md = window.markdownit();
+			const md = window.markdownit({ html: true });
 			const main = document.querySelector('main');
 
 			slides.forEach((slide, idx) => {
@@ -72,9 +72,11 @@
 				nextSlide = document.querySelector(`#slide-${totalSlides - 1}`);
 			} else if (target.id === 'to-prev-slide') {
 				const currentSlideIdx = parseInt(currentSlide.id.split('-')[1]);
+				if (currentSlideIdx === 0) return;
 				nextSlide = document.querySelector(`#slide-${currentSlideIdx - 1}`);
 			} else if (target.id === 'to-next-slide') {
 				const currentSlideIdx = parseInt(currentSlide.id.split('-')[1]);
+				if (currentSlideIdx === totalSlides - 1) return;
 				nextSlide = document.querySelector(`#slide-${currentSlideIdx + 1}`);
 			}
 
