@@ -45,9 +45,7 @@
 ![](explain-code.png)
 
 --- 
-### Discovering logic errors
 
---- 
 ### A comprehensive practical example
 
 [A small `docker-compose` project](https://poe.com/s/6Omq7wDLLVmFVQITyhWJ)
