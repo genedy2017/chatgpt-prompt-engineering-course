@@ -41,7 +41,7 @@
 
 			slides.forEach((slide, idx) => {
 				const slideEl = document.createElement('div');
-				slideEl.innerHTML = md.render(slide);
+				slideEl.innerHTML = `<div class="page-num">${idx + 1} / ${slides.length}</div> ${md.render(slide)}`;
 				slideEl.classList.add('slide');
 				slideEl.id = `slide-${idx}`;
 
@@ -182,6 +182,12 @@
 		/* center h1, h2, ... in slides */
 		.slide h1, .slide h2, .slide h3, .slide h4, .slide h5, .slide h6 {
 			text-align: center;
+		}
+		.page-num {
+			text-align: right;
+			padding: 0.5em;
+			color: #999;
+			font-size: 0.8em;
 		}
 	</style>
 </body>
