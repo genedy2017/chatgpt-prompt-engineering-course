@@ -21,6 +21,9 @@
 --- 
 
 ### Writing simple functions in any language
+
+![](write-fibonacci-function-in-js.png)
+![](write-fibonacci-function-in-python.png)
 --- 
 
 ### Writing a bash script to automate a complex task
