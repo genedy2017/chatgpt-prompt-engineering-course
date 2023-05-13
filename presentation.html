@@ -10,11 +10,10 @@
 		<header>
 			<nav>
 				<ul>
-					<li><a href="#start">Start</a></li>
-					<li><a href="#chatgpt">ChatGPT</a></li>
-					<li><a href="#prompt-engineering">Prompt engineering</a></li>
-					<li><a href="#copilot">CoPilot</a></li>
-					<li><a href="#end">End</a></li>
+					<li><a href="#start" id="to-first-slide">Start</a></li>
+					<li><a href="#prev" id="to-prev-slide">Previous</a></li>
+					<li><a href="#next" id="to-next-slide">Next</a></li>
+					<li><a href="#end" id="to-last-slide">End</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -28,24 +27,76 @@
 		</footer>
 	</div>
 
+	<script src="markdown-it.min.js"></script>
+
 	<script>
+		// Get all slides
 		fetch('https://raw.githubusercontent.com/genedy2017/chatgpt-prompt-engineering-course/master/AI-tools-for-developers.md')
 		.then(res => res.text())
 		.then(rawMd => {
-			const slides = rawMd.split("---");
-			
+			const slides = rawMd.split("---").map(slide => slide.trim());
+			const md = window.markdownit();
+			const main = document.querySelector('main');
+
+			slides.forEach((slide, idx) => {
+				const slideEl = document.createElement('div');
+				slideEl.innerHTML = md.render(slide);
+				slideEl.classList.add('slide');
+				slideEl.id = `slide-${idx}`;
+
+				// if first slide, add .active class
+				if (idx === 0) {
+					slideEl.classList.add('active');
+				}
+
+				main.appendChild(slideEl);
+			});
 		})
 		.catch(err => console.error(err));
+
+		// handle navigation:
+		// on clicking any of the links in the nav,
+		// check the link id, get the current slide,
+		// remove the .active class from the current slide,
+
+		document.querySelector('nav').addEventListener('click', e => {
+			e.preventDefault();
+			const target = e.target;
+			const currentSlide = document.querySelector('.slide.active');
+			const totalSlides = document.querySelectorAll('.slide').length;
+			let nextSlide;
+
+			if (target.id === 'to-first-slide') {
+				nextSlide = document.querySelector('#slide-0');
+			} else if (target.id === 'to-last-slide') {
+				nextSlide = document.querySelector(`#slide-${totalSlides - 1}`);
+			} else if (target.id === 'to-prev-slide') {
+				const currentSlideIdx = parseInt(currentSlide.id.split('-')[1]);
+				nextSlide = document.querySelector(`#slide-${currentSlideIdx - 1}`);
+			} else if (target.id === 'to-next-slide') {
+				const currentSlideIdx = parseInt(currentSlide.id.split('-')[1]);
+				nextSlide = document.querySelector(`#slide-${currentSlideIdx + 1}`);
+			}
+
+			currentSlide.classList.remove('active');
+			nextSlide.classList.add('active');
+		});
+
 	</script>
 
 	<style>
+		body {
+			margin: 0;
+			font-family: sans-serif;
+		}
+
 		header, footer {
 			background: #333; 
 		}
 
 		nav {
 			display: flex;
-			justify-content: space-between;
+			justify-content: center;
 		}  
 
 		nav ul {
@@ -69,6 +120,18 @@
 
 		nav a:hover {
 			background: #666;
+		}
+
+		.slide {
+			display: none;
+		}
+		.slide.active {
+			display: block;
+			border: 1px solid #333;
+			padding: 2em;
+			border-radius: 1em;
+			margin: 2em;
+			min-height: 70vh;
 		}
 	</style>
 </body>
