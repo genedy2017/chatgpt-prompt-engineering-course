@@ -227,7 +227,7 @@
 
 ![](reduce-hallucinations.png)
 
-
+> {Question}? First find relevent information, then answer the question based on relevent information
 
 ---
 ## CoPilot
