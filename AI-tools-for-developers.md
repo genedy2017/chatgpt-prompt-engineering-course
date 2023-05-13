@@ -21,6 +21,10 @@
 ### Accessing ChatGPT :(
 --- 
 
+![](the-race-to-1-billion-users-chart.webp)
+
+---
+
 ## ChatGPT as your personal coding assistant
 --- 
 
