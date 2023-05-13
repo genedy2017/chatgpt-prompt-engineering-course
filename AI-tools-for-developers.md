@@ -32,6 +32,8 @@
 --- 
 
 ### modifying generated code
+
+![](modify-generated-code.png)
 --- 
 
 ### Explaining code
