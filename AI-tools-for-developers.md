@@ -10,12 +10,11 @@
 
 # ChatGPT
 
-## * LLM = Large Language Model
+### LLM = Large Language Model
 
-## * GPT = Generative Pre-trained Transformer
-   * In Arabic: مولد مدرب مسبقا بنموذج التحويلات
-
-## * Accessing ChatGPT :(
+### GPT = Generative Pre-trained Transformer
+### In Arabic: مولد مدرب مسبقا بنموذج التحويلات
+### Accessing ChatGPT :(
 --- 
 
 ## ChatGPT as your personal coding assistant
