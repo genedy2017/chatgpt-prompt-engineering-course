@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>AI tools for developers</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<nav>
+				<ul>
+					<li><a href="#start">Start</a></li>
+					<li><a href="#chatgpt">ChatGPT</a></li>
+					<li><a href="#prompt-engineering">Prompt engineering</a></li>
+					<li><a href="#copilot">CoPilot</a></li>
+					<li><a href="#end">End</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<main>
+			<!-- Content goes here -->
+		</main>
+		
+		<footer>
+			<p>AI tools for developers</p>
+		</footer>
+	</div>
+
+	<script>
+		fetch('AI-tools-for-developers.md')
+		.then(res => res.text())
+		.then(rawMd => {
+			const slides = rawMd.split("---");
+			console.log(`Num slides: ${slides.length}`);
+		})
+		.catch(err => console.error(err));
+	</script>
+</body>
+</html>
