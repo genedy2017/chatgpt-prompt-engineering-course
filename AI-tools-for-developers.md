@@ -38,6 +38,8 @@
 
 ### Explaining code
 
+![](explain-code.png)
+
 --- 
 ### Discovering logic errors
 
