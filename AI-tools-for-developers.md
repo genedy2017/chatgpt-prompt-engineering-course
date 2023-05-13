@@ -53,6 +53,10 @@
 --- 
 ### UI design
 
+### [UI design example](https://poe.com/s/VbDBbFQcaqlE346lDCrc)
+
+### [Output page](ui-design.html)
+
 --- 
 ## Prompt "engineering" process
 
