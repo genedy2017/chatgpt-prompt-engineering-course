@@ -21,6 +21,12 @@
 ### Accessing ChatGPT :(
 --- 
 
+### - ChatGPT 3.5 launched publicly on 30 Nov 2022
+
+### - ChatGPT 4.0 launched publicly on 14 Mar 2023
+
+### - 1.6 billion visitors by March 2023
+
 ![](the-race-to-1-billion-users-chart.webp)
 
 ---
